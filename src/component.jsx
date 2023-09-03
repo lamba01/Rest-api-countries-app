@@ -69,6 +69,7 @@ function App() {
             <p>Population: {country.population.toLocaleString()}</p>
             <p>Languages: {renderLanguages(country.languages)}</p>
             <p>Currency: {renderCurrency(country.currencies)}</p>
+
           </div>
         </div>
       );
@@ -80,6 +81,10 @@ function App() {
       <div className="header">
         <h1>World Countries Data</h1>
         <p>Currently, we have {data.length} countries</p>
+        {searchQuery && (
+      <p className="filteredtext">{filteredData.length} satisfied the search criteria</p>
+    )}
+        {/* <p>{filteredData.length} satisfied the search criteria</p> */}
       </div>
       <input
         type="text"
@@ -88,6 +93,7 @@ function App() {
         value={searchQuery}
         onChange={handleInputChange}
       />
+
       <div className="country-container">{renderCountries()}</div>
     </div>
   );

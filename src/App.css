@@ -21,6 +21,10 @@
   margin: 0;
   font-weight: 1000;
 }
+.filteredtext {
+  color: orange;
+  font-style: italic;
+}
 .flag {
   width: 200px;
   height: 120px;
@@ -41,6 +45,11 @@
   max-width: 80%;
   padding: 20px 0px;
   margin: 10px 0px;
+  transition: transform 0.5s ease-in-out;
+}
+.countries-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 1px 1px 1px gray;
 }
 .country-container {
   width: 90%;
@@ -56,6 +65,6 @@
   /* height: 30px; */
   border-radius: 50px;
   padding: 10px 20px;
-  font-size: 30px;
+  font-size: 20px;
   align-self: center;
 }
